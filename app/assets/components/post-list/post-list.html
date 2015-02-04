@@ -1,0 +1,62 @@
+<!-- 
+<polymer-element name="post-list" attributes="show">
+  <template>
+    <link rel="stylesheet" href="post-list.scss" />
+    <post-service id="service" posts="{{posts}}"></post-service>
+    <div layout vertical center>
+
+	  <template repeat="{{post in posts}}">
+	    <post-card
+      favorite="{{post.favorite}}"//post-card의 favoritetapped 함수에 의해서 제어된다.
+      on-favorite-tap="{{handleFavorite}}"      
+      hidden?="{{show == 'favorites' && !post.favorite}}"> //바인딩식의 조건에 해당하는 요소를 가린다. -post.favorite가 false일 경우 !post.favorite는 true를 보낸다
+
+	      <img src="{{post.avatar}}" width="70" height="70">
+	      <h2>{{post.username}}</h2>
+	      <p>{{post.text}}</p>
+	    </post-card>
+	  </template>
+
+	</div>
+  </template>
+
+  <script>
+  	Polymer({
+  		handleFavorite: function(event, detail, sender) {
+		    var post = sender.templateInstance.model.post;
+		    this.$.service.setFavorite(post.uid, post.favorite);
+		  }
+  	});
+  </script>
+</polymer-element>
+
+ -->
+<polymer-element name="post-list" attributes="show">
+  <template>
+    <link rel="stylesheet" href="post-list.scss" />
+    <post-service id="service" posts="{{posts}}"></post-service>
+    <div layout vertical center>
+
+	  <template repeat="{{post in posts}}">
+	    <post-card
+      favorite="{{post.favorite}}"
+      on-favorite-tap="{{handleFavorite}}"
+      hidden?="{{show == 'favorites' && (post.favorite==false)}}">
+	      <img src="{{post.avatar}}" width="70" height="70">
+	      <h2>{{post.username}}</h2>
+	      <p>{{post.text}}</p>
+	    </post-card>
+	  </template>
+
+	</div>
+  </template>
+
+  <script>
+  	Polymer({
+  		handleFavorite: function(event, detail, sender) {
+		    var post = sender.templateInstance.model.post;
+		    this.$.service.setFavorite(post.uid, post.favorite);
+		  }
+  	});
+  </script>
+</polymer-element>
