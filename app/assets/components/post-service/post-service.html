@@ -55,7 +55,7 @@
     </style>
     <core-ajax id="ajax"
       auto
-      url="http://polymer-tut.appspot.com/api/posts.json"
+      url="/posts.json"
       on-core-response="{{postsLoaded}}"
       handleAs="json">
     </core-ajax>
@@ -81,7 +81,7 @@
      */
     setFavorite: function(uid, isFavorite) {
       // no service backend, just log the change
-      console.log('Favorite changed: ' + uid + ", now: " + isFavorite);
+      console.log('Favorite changed: ' + id + ", now: " + isFavorite);
     }
   });
   </script>
