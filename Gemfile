@@ -45,11 +45,15 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
-  gem 'rails_12factor', '0.0.2'
-  gem 'unicorn',        '4.8.3'
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'unicorn'
 end
 
+gem 'yt', '~> 0.13.7'
+#gem 'bootstrap-sass', '~> 3.3.0.1'
+gem 'autoprefixer-rails'
+gem 'rails-observers'
+gem 'slim', '~> 3.0.3'
 gem 'bower-rails'
 gem 'emcee'
-gem 'polymer-rails'

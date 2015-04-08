@@ -1,0 +1,14 @@
+html
+	head
+	  meta charset="utf-8"
+	  title kskprofile
+	  meta name="viewport" content="width=device-width, initial-scale=1.0"
+	  = stylesheet_link_tag    "application", :media => "all", "shim-shadowdom"=>"" 
+	  = javascript_include_tag "application" 
+
+	  script src="https://www.google.com/jsapi" type="text/javascript"
+	  script src="https://www.youtube.com/iframe_api"
+	  = html_import_tag "application", "data-turbolinks-track" =>true 
+	  = csrf_meta_tags
+	body
+	  = yield 

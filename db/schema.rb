@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205121905) do
+ActiveRecord::Schema.define(version: 20150406033026) do
 
-  create_table "posts", force: :cascade do |t|
-    t.text     "content"
-    t.string   "username"
-    t.string   "avatar"
-    t.boolean  "favorite"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "videos", force: :cascade do |t|
+    t.string   "link"
+    t.string   "title"
+    t.datetime "published_at"
+    t.integer  "likes"
+    t.integer  "dislikes"
+    t.string   "uid"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
+
+  add_index "videos", ["uid"], name: "index_videos_on_uid"
 
 end

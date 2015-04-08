@@ -1,4 +1,0 @@
-
-//= require index
-//= require turbolinks
-
