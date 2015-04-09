@@ -713,9 +713,11 @@ h3{
 paper-button{
   background: rgba(0,0,0,0.8);
 }
+hr, hr.paragraph{
+  width:95%;
+}
 .paragraph{
   border: 0;
-  width: 100%;
   color: rgba(0,0,0,0.1);
   background-color: rgba(0,0,0,0.1);
   height: 0.1rem;
