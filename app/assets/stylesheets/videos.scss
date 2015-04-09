@@ -629,7 +629,7 @@ html /deep/ paper-spinner:not([default-spinner])::shadow .circle {
   list-style: none;
 }
 main{
-  padding: 0 0.25rem 0.25rem 0.25rem;
+  /*padding: 0 0.25rem 0.25rem 0.25rem;*/
   background: #fff;
 }
 .stack_list{
@@ -678,9 +678,12 @@ h3{
   width: 100%;
 }
 .skil_list{
-  display: inline-block;
+  background: rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  /*display: inline-block;*/
   float: left;
-  padding:0 1.35rem 0.8rem 1.35rem;
+  margin:0.35rem 1rem;
+  padding: 0.5rem;
 }
 /*introduce*/
 .introduce_list{
