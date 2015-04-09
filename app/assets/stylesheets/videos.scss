@@ -700,12 +700,6 @@ h3{
     width: 13.5rem;
   }
 }
-/*account*/
-.account_form{
-  display: inline-block;
-  width: 100%;
-}
-
 /*player*/
 #player-wrapper{
   position: fixed;
@@ -718,6 +712,13 @@ h3{
 }
 paper-button{
   background: rgba(0,0,0,0.8);
+}
+.paragraph{
+  border: 0;
+  width: 100%;
+  color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.1);
+  height: 0.1rem;
 }
 @media (min-width: 768px){
   main{
