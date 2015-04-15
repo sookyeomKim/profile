@@ -504,8 +504,8 @@
 				else if(data.value===45)data.comment='2014공개소프트웨어 대회 시작';
 				else if(data.value===53)data.comment='교육과 대회 프로젝트 기획의 병행';
 				else if(data.value===65)data.comment='ruby와의 첫 만남, 덤으로 영어공부까지';
-				else if(data.value===90)data.comment='대회에 올인, html/css/javascript overtraining';
-				else if(data.value===99)data.comment='스터디 프로젝트, ror에서의 polymerjs,backbonejs학습';
+				else if(data.value===90)data.comment='html/css/javascript overtraining';
+				else if(data.value===99)data.comment='ror에서의 polymerjs,backbonejs학습';
 				// Provide some basic currying to the user
 				return data ? fn( data ) : fn;
 			}
