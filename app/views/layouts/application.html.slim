@@ -2,10 +2,10 @@ doctype html
 html
 	head
 	  meta charset="utf-8"
-	  title kskprofile
+	  title playground
 	  meta name="viewport" content="width=device-width, initial-scale=1.0"
-	  = stylesheet_link_tag "application", 'http://fonts.googleapis.com/earlyaccess/jejugothic.css', :media => "all"
 	  = stylesheet_link_tag    "application", :media => "all", "shim-shadowdom"=>"", "data-turbolinks-track" =>true 	  
+	  = javascript_include_tag "application", "data-turbolinks-track" =>true
 	  = csrf_meta_tags
 	body unresolved="true"
 		my-scaffold
@@ -39,5 +39,5 @@ html
 						a href="#portfolio" target="_self"
 			header tool="" DEVELOPMENT ROMANTIC SUCCESSFUL
 			= yield 
-		= javascript_include_tag "application", "data-turbolinks-track" =>true  
+		= javascript_include_tag "bottom", "data-turbolinks-track" =>true  
 		= html_import_tag "application", "data-turbolinks-track" =>true 

@@ -13,9 +13,5 @@
 //= require webcomponentsjs/webcomponents.min
 //= require jquery
 //= require jquery_ujs
-//= require zeroclipboard/dist/ZeroClipboard.min
-//= require chartjs/Chart.min
-//= require profile
 //= require turbolinks
-//= require_tree .
 

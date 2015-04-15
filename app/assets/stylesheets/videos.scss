@@ -1,4 +1,3 @@
-
 /*component*/
 html /deep/ #mainContainer{
   background-color: #fff;
@@ -13,7 +12,6 @@ html /deep/ core-toolbar{
 
 /*all*/
 *{
-  font-family: 'Jeju Gothic', serif;
   text-decoration: none;
   list-style: none;
 }
@@ -68,7 +66,11 @@ h3{
 #gitaccount{
   color: #000;
 }
-#myChart{}
+#button-copy{
+  margin: 0 0.3rem;
+  width: 0.8rem;
+  height: 0.8rem;
+}
 /*skil*/
 .skil_list_form{
   display: inline-block;
@@ -100,16 +102,6 @@ h3{
     width: 13.5rem;
   }
 }
-/*player*/
-#player-wrapper{
-  position: fixed;
-  top: 3.5rem;
-  right: 0;
-  width: 15rem;
-}
-[playeron]{
-  display: block;
-}
 paper-button{
   background: rgba(0,0,0,0.8);
 }
@@ -122,15 +114,15 @@ hr, hr.paragraph{
   background-color: rgba(0,0,0,0.075);
   height: 0.1rem;
 }
+#myChart{
+  padding-top: 1rem;
+}
 @media (min-width: 768px){
   main{
     padding:0 1rem 1rem 1rem; 
   }
   h4{
     margin-top: 0.75rem;
-  }
-  #player-wrapper{
-    width: 25rem;
   }
 }
 
@@ -143,8 +135,5 @@ hr, hr.paragraph{
   }
   h4{
     margin-top: 0.75rem;
-  }
-  #player-wrapper{
-    width: 35rem;
   }
 }
