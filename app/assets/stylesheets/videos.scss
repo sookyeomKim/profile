@@ -19,8 +19,8 @@ html /deep/ core-toolbar{
   text-decoration: none;
   list-style: none;
 }
-main{
-  padding: 0 5px 5px 5px;
+.main_form{
+  padding: 0 0.2rem 0.2rem 0.2rem;
 }
 .stack_list{
   list-style: square; 
@@ -142,7 +142,7 @@ hr, hr.paragraph{
 }
 @media (min-width: 768px){
   main{
-    padding:0 10px 10px 10px; 
+    padding:0 0.8rem 0.8rem 0.8rem; 
   }
   h4{
     margin-top: 0.75rem;
@@ -151,7 +151,7 @@ hr, hr.paragraph{
 
 @media (min-width: 992px){
   main{
-    padding:0 15px 15px 15px;
+    padding:0 1.2rem 1.2rem 1.2rem;
   }
   h3,h4,p{
     text-align: left;
