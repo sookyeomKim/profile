@@ -4,12 +4,39 @@ html
 	  meta charset="utf-8"
 	  title kskprofile
 	  meta name="viewport" content="width=device-width, initial-scale=1.0"
-	  = stylesheet_link_tag    "application", :media => "all", "shim-shadowdom"=>"" 
-	  = javascript_include_tag "application" 
-
-	  script src="https://www.google.com/jsapi" type="text/javascript"
-	  script src="https://www.youtube.com/iframe_api"
-	  = html_import_tag "application", "data-turbolinks-track" =>true 
+	  = stylesheet_link_tag    "application", :media => "all", "shim-shadowdom"=>"", "data-turbolinks-track" =>true 	  
 	  = csrf_meta_tags
-	body
-	  = yield 
+	body unresolved="true"
+		my-scaffold
+			core-header-panel navigation="" flex="" mode="seamed"
+				div
+					div#profile
+				      div#profile_top_form 
+				        div#profile_img class="profile_top" layout="" vertical="" center=""
+				          =image_tag "profile.jpg"
+				        div#profile_mini_intro
+				        	|개발놀이공원의 프런트-엔드 개발자 어린이입니다.
+				        div class="profile_top" layout="" vertical="" center=""
+				          table
+				            tr
+				              td.profile_content
+				                |Kim-sukyum
+				            tr
+				              td.profile_content
+				                |ikks06luck@naver.com
+				                core-icon icon="content-copy" id='button-copy' data-clipboard-text='ikks06luck@naver.com'
+				            tr
+				              td.profile_content
+				                a href="https://github.com/sukyumKim" id="gitaccount"
+            					 |https://github.com/sukyumKim
+				core-menu layout="" vertical="" center=""
+					core-item label="프로필" class="category_list" 
+						a href="#myprofile" target="_self"
+					core-item label="교육이력" class="category_list"
+						a href="#training" target="_self"
+					core-item label="프로젝트 경험" class="category_list"
+						a href="#portfolio" target="_self"
+			header tool="" DEVELOPMENT ROMANTIC SUCCESSFUL
+			= yield 
+		= javascript_include_tag "application", "data-turbolinks-track" =>true  
+		= html_import_tag "application", "data-turbolinks-track" =>true 

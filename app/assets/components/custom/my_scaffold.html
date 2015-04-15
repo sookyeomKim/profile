@@ -24,13 +24,17 @@
 		#drawerPanel:not([narrow]) #menuButton {
 			display: none;
 		}
-
+		#bbong{
+			height: 64px;
+		}
 		</style>
 
 		<core-drawer-panel id="drawerPanel" narrow="{{narrow}}" drawerWidth="{{drawerWidth}}" rightDrawer="{{rightDrawer}}" responsiveWidth="{{responsiveWidth}}" disableSwipe="{{disableSwipe}}">
 
 			<div vertical layout drawer>
-
+				<template if="{{responsive}}">
+					<div id="bbong"></div>
+				</template>
 				<content select="[navigation], nav"></content>
 
 			</div>
@@ -52,7 +56,7 @@
 			</core-header-panel>
 
 		</core-drawer-panel>
-
+		<core-media-query query="max-width: 991px" queryMatches="{{responsive}}"></core-media-query>
 	</template>
 	<script>
 
@@ -85,7 +89,7 @@
 	       * @type string
 	       * @default '256px'
 	       */
-	       drawerWidth: '256px',
+	       drawerWidth: '300px',
 
 	      /**
 	       * When the browser window size is smaller than the `responsiveWidth`, 
