@@ -13,5 +13,6 @@
 //= require webcomponentsjs/webcomponents.min
 //= require jquery
 //= require jquery_ujs
+//= require chartjs/Chart
 //= require turbolinks
 

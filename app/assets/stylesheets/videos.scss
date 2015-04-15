@@ -6,6 +6,10 @@ html /deep/ core-toolbar{
   background-color: #fff;
   color: #000;
   font-weight: 700;
+  -webkit-box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
@@ -116,6 +120,25 @@ hr, hr.paragraph{
 }
 #myChart{
   padding-top: 1rem;
+}
+
+ #chartjs-tooltip {
+    opacity: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, .7);
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+.chartjs-tooltip-key{
+  display:inline-block;
+  width:10px;
+  height:10px;
 }
 @media (min-width: 768px){
   main{

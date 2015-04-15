@@ -166,7 +166,7 @@
 			tooltipXOffset: 10,
 
 			// String - Template string for single tooltips
-			tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
+			tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= comment %>",
 
 			// String - Template string for single tooltips
 			multiTooltipTemplate: "<%= value %>",
@@ -178,7 +178,9 @@
 			onAnimationProgress: function(){},
 
 			// Function - Will fire on animation completion.
-			onAnimationComplete: function(){}
+			onAnimationComplete: function(){},
+
+
 
 		}
 	};
@@ -463,7 +465,7 @@
 		//Templating methods
 		//Javascript micro templating by John Resig - source at http://ejohn.org/blog/javascript-micro-templating/
 		template = helpers.template = function(templateString, valuesObject){
-
+			
 			// If templateString is function rather than string-template - call the function for valuesObject
 
 			if(templateString instanceof Function){
@@ -496,10 +498,18 @@
 						.split("\r").join("\\'") +
 					"');}return p.join('');"
 				);
-
+				if(data.value===0)data.comment='개발의 길 gogogo';
+				else if(data.value===20)data.comment='이게 바로 java구나';
+				else if(data.value===40)data.comment='나의 첫 슈팅게임 탄생';
+				else if(data.value===45)data.comment='2014공개소프트웨어 대회 시작';
+				else if(data.value===53)data.comment='교육과 대회 프로젝트 기획의 병행';
+				else if(data.value===65)data.comment='ruby와의 첫 만남, 덤으로 영어공부까지';
+				else if(data.value===90)data.comment='대회에 올인, html/css/javascript overtraining';
+				else if(data.value===99)data.comment='스터디 프로젝트, ror에서의 polymerjs,backbonejs학습';
 				// Provide some basic currying to the user
 				return data ? fn( data ) : fn;
 			}
+
 			return tmpl(templateString,valuesObject);
 		},
 		/* jshint ignore:end */
@@ -852,8 +862,8 @@
 			var canvas = this.chart.canvas,
 				newWidth = getMaximumWidth(this.chart.canvas),
 				newHeight = this.options.maintainAspectRatio ? newWidth / this.chart.aspectRatio : getMaximumHeight(this.chart.canvas);
-
-			canvas.width = this.chart.width = newWidth;
+				if(newWidth>=991)canvas.width = this.chart.width = newWidth-300;
+				else canvas.width = this.chart.width = newWidth;
 			canvas.height = this.chart.height = newHeight;
 
 			retinaScale(this.chart);
@@ -910,7 +920,6 @@
 		showTooltip : function(ChartElements, forceRedraw){
 			// Only redraw the chart if we've actually changed what we're hovering on.
 			if (typeof this.activeElements === 'undefined') this.activeElements = [];
-
 			var isChanged = (function(Elements){
 				var changed = false;
 
@@ -2615,6 +2624,7 @@
 				helpers.each(dataset.data,function(dataPoint,index){
 					//Add a new point for each piece of data, passing any required data to draw.
 					datasetObject.points.push(new this.PointClass({
+						comment : "",
 						value : dataPoint,
 						label : data.labels[index],
 						datasetLabel: dataset.label,
