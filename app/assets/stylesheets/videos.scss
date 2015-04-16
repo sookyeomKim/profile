@@ -19,8 +19,9 @@ html /deep/ core-toolbar{
   text-decoration: none;
   list-style: none;
 }
-.main_form{
-  padding: 0 0.2rem 0.2rem 0.2rem;
+html #mainContainer,
+html /deep/ #mainContainer,{
+  padding: 0 0.3rem 0.3rem 0.3rem;
 }
 .stack_list{
   list-style: square; 
