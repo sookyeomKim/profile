@@ -142,7 +142,8 @@ hr, hr.paragraph{
   height:10px;
 }
 @media (min-width: 768px){
-  .main_form{
+  html #mainContainer,
+  html /deep/ #mainContainer,{
     padding:0 0.8rem 0.8rem 0.8rem; 
   }
   h4{
@@ -151,7 +152,8 @@ hr, hr.paragraph{
 }
 
 @media (min-width: 992px){
-  .main_form{
+  html #mainContainer,
+  html /deep/ #mainContainer,{
     padding:0 1.2rem 1.2rem 1.2rem;
   }
   h3,h4,p{
