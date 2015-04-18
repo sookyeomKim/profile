@@ -52,9 +52,10 @@ group :production do
 end
 
 gem 'yt', '~> 0.13.7'
-#gem 'bootstrap-sass', '~> 3.3.0.1'
 gem 'autoprefixer-rails'
 gem 'rails-observers'
 gem 'slim', '~> 3.0.3'
 gem 'bower-rails'
 gem 'emcee'
+gem "mini_magick"
+gem "refile", require: ["refile/rails", "refile/image_processing"]

@@ -1,0 +1,9 @@
+= link_to 'New Blog', new_blog_path 
+- @blogs.each do |blog| 
+    = blog.title  
+    = image_tag attachment_url(blog, :image, :fill, 300, 300)
+    = link_to 'Show', blog 
+    = link_to 'Edit', edit_blog_path(blog) 
+    = link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }
+
+

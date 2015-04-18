@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :blogs
+
   get 'blog'=>'blog#index'
 
   resources :videos, only: [:index, :new, :create]

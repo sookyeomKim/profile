@@ -5,6 +5,9 @@
     "polymer-core-elements": "git://github.com/Polymer/core-elements",
     "polymer-paper-elements": "git://github.com/Polymer/paper-elements",
     "zeroclipboard": "latest",
-    "chartjs": "latest"
+    "chartjs": "latest",
+    "jquery.cookie": "latest"
+  },
+  "resolutions": {
   }
 }

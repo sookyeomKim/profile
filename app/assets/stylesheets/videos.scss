@@ -68,9 +68,6 @@ h3{
   font-size: 0.8rem;
   color: #666;
 }
-#gitaccount{
-  color: #000;
-}
 #button-copy{
   margin: 0 0.3rem;
   width: 0.8rem;
@@ -122,25 +119,15 @@ hr, hr.paragraph{
 #myChart{
   padding-top: 1rem;
 }
+#main_warning{
+  padding: 0.8rem 0.3rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 0 0 1rem 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
 
- #chartjs-tooltip {
-    opacity: 1;
-    position: absolute;
-    background: rgba(0, 0, 0, .7);
-    color: white;
-    padding: 3px;
-    border-radius: 3px;
-    -webkit-transition: all .1s ease;
-    transition: all .1s ease;
-    pointer-events: none;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-}
-.chartjs-tooltip-key{
-  display:inline-block;
-  width:10px;
-  height:10px;
-}
+
 @media (min-width: 768px){
   html #mainContainer,
   html /deep/ #mainContainer,{

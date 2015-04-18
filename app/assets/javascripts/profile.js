@@ -1,3 +1,19 @@
+/*mainwarning*/
+$(function(){
+    if(!($.cookie('popup'))){
+        $("#main_warning").show();
+        location.href = "#main_warning";
+        setTimeout(function(){
+            $("#main_warning").fadeOut(3500,function(){
+                $.cookie('popup', 'hidden', {expires : 1});
+            })
+        },3000);
+    }else{
+        $("#main_warning").hide();
+    }
+})
+
+
 /*zeroclipbord*/
 $(function() {
 	ZeroClipboard.config({
