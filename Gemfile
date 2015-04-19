@@ -58,6 +58,5 @@ gem 'slim', '~> 3.0.3'
 gem 'bower-rails'
 gem 'emcee'
 
-gem 'carrierwave'
+gem 'carrierwave-aws'
 gem 'rmagick'
-gem 'fog'
