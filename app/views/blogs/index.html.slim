@@ -5,6 +5,6 @@ blog-container
 		= link_to(blog) do
 			article-card
 				div.article_img
-				    = image_tag attachment_url(blog, :image, :fill, 300, 300)
+					=image_tag(blog.attachment_url(:nomal))
 			    div.article_name
 			    	= blog.title

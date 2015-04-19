@@ -1,3 +1,3 @@
 class Blog < ActiveRecord::Base
-	attachment :image
+	mount_uploader :attachment, AttachmentUploader
 end
