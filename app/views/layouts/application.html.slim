@@ -4,9 +4,12 @@ html
 	  meta charset="utf-8"
 	  title playground
 	  meta name="viewport" content="width=device-width, initial-scale=1.0"
+	  meta name="mobile-web-app-capable" content="yes"
+      meta name="apple-mobile-web-app-capable" content="yes"
 	  = stylesheet_link_tag    "application", :media => "all", "shim-shadowdom"=>"", "data-turbolinks-track" =>true 	  
 	  = javascript_include_tag "application", "data-turbolinks-track" =>true
 	  = csrf_meta_tags
+	  = html_import_tag [params[:controller], params[:action]].join('/'), "data-turbolinks-track" => true
 	body unresolved="true"
 		my-scaffold
 			core-header-panel navigation="" flex="" mode="seamed"
@@ -45,4 +48,3 @@ html
 					|polymerjs 탐구 중 입니다. 고로 polymerjs로 구현 중 입니다. 고로 IE는 11이상만 호환이 됩니다...
 				= yield 
 		= javascript_include_tag "bottom", "data-turbolinks-track" =>true
-		= html_import_tag [params[:controller], params[:action]].join('/'),'data-turbolinks-track' => true 
