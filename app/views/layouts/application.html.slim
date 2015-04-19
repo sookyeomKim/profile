@@ -41,8 +41,8 @@ html
 						a href="/blogs" target="_self"
 			header tool="" DEVELOPMENT ROMANTIC SUCCESSFUL
 			main
-				section
-					#main_warning polymerjs 탐구 중 입니다. 고로 polymerjs로 구현 중 입니다. 고로 IE는 11이상만 호환이 됩니다...
+				section#main_warning
+					|polymerjs 탐구 중 입니다. 고로 polymerjs로 구현 중 입니다. 고로 IE는 11이상만 호환이 됩니다...
 				= yield 
-		= javascript_include_tag "bottom", "data-turbolinks-track" =>true  
-		= html_import_tag "application", "data-turbolinks-track" =>true 
+		= javascript_include_tag "bottom", "data-turbolinks-track" =>true
+		= html_import_tag [params[:controller], params[:action]].join('/'),'data-turbolinks-track' => true 

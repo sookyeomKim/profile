@@ -1,6 +1,6 @@
 <polymer-element name="my-scaffold">
 	<template>
-		<style>
+		<style shim-shadowdom>
 
 		:host {
 			display: block;
@@ -11,14 +11,12 @@
 			box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
 		}
 
-		[main] {
-			height: 100%;
-			background-color: #eee;
-		}
-
 		core-toolbar {
 			background-color: #526E9C;
 			color: #fff;
+		}
+		::content main{
+			position: relative;
 		}
 
 		#drawerPanel:not([narrow]) #menuButton {

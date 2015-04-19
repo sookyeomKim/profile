@@ -1,0 +1,21 @@
+<polymer-element name="article-card" noscript>
+	<template>
+		<style shim-shadowdom>
+			:host{
+				position: relative;
+				display: inline-block;
+				padding: 0.25rem;
+				margin:  0.25rem;
+			}
+			:host,
+			::content img{
+				width: 10rem;
+				border-radius: 0.25rem;
+			}
+		</style>
+		<paper-shadow z="2">
+			<content select="*"></content>
+			<content select=".article_name"></content>
+		</paper-shadow>
+	</template>
+</polymer-element>

@@ -13,32 +13,6 @@ html /deep/ core-toolbar{
   box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
-
-/*all*/
-*{
-  text-decoration: none;
-  list-style: none;
-}
-html #mainContainer,
-html /deep/ #mainContainer,{
-  padding: 0 0.3rem 0.3rem 0.3rem;
-}
-.stack_list{
-  list-style: square; 
-}
-.player_list{
-  display: inline-block;
-}
-h2,h3{
-  font-weight: 700 !important;
-}
-h3{
-  padding-top: 1rem !important;
-}
-.yt_preview{
-  cursor: pointer;
-}
-
 /*profile*/
 #profile > #profile_top_form > #profile_img > img{
   margin: 2rem 0 0.75rem 0;
@@ -126,7 +100,9 @@ hr, hr.paragraph{
   font-size: 1.3rem;
   color: #fff;
 }
-
+#gitaccount{
+  color: #444;
+}
 
 @media (min-width: 768px){
   html #mainContainer,

@@ -1,0 +1,27 @@
+<polymer-element name="blog-container" noscript>
+	<template>
+		<style>
+			:host{
+				width: 80%;
+				height: 100%;
+				margin: 40px auto;
+				background: red;
+			}
+			.outer{
+				display: table;
+				width: 100%;
+				height: 100%;
+			}
+			.inner{
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
+		</style>
+		<div class="outer">
+			<div class="inner">
+				<content select="*"></content>
+			</div>
+		</div>
+	</template>
+</polymer-element>

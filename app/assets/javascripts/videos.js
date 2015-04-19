@@ -13,7 +13,6 @@ $(function(){
     }
 })
 
-
 /*zeroclipbord*/
 $(function() {
 	ZeroClipboard.config({
