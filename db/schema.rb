@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150419220516) do
+ActiveRecord::Schema.define(version: 20150420084355) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20150419220516) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
-    t.text     "content"
     t.string   "attachment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
