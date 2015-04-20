@@ -54,9 +54,14 @@ end
 gem 'yt', '~> 0.13.7'
 gem 'autoprefixer-rails'
 gem 'rails-observers'
+
 gem 'slim', '~> 3.0.3'
+gem 'simple_form', '3.1.0'
+
 gem 'bower-rails'
 gem 'emcee'
 
 gem 'carrierwave-aws'
 gem 'rmagick'
+
+gem 'friendly_id', '~> 5.1.0'

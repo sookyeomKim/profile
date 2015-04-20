@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :blogs
 
-  get 'blog'=>'blog#index'
+  resources :blogs do
+    resources :articles
+  end
+
+  get 'blog' =>"blog#index"
 
   resources :videos, only: [:index, :new, :create]
   root to: 'videos#index'

@@ -3,9 +3,7 @@
 one:
   title: MyString
   content: MyText
-  attachment: MyString
 
 two:
   title: MyString
   content: MyText
-  attachment: MyString

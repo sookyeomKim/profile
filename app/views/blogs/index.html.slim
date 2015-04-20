@@ -1,10 +1,15 @@
 section
-	= link_to '새로운 카드 생성', new_blog_path
-blog-container
-	- @blogs.each do |blog|
-		= link_to(blog) do
-			article-card
-				div.article_img
-					=image_tag(blog.attachment_url(:nomal))
-			    div.article_name
-			    	= blog.title
+  = link_to 'New Blog', new_blog_path
+section 
+  blog-container
+    - @blogs.each do |blog|
+      = link_to(blog_articles_path(blog)) do
+        article-card
+          div
+            = image_tag(blog.attachment_url(:nomal))
+          div
+            = blog.title
+          / = link_to 'Edit', edit_blog_path(blog)
+          / = link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }
+
+

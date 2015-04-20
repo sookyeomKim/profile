@@ -1,1 +1,1 @@
-json.extract! @blog, :id, :index, :title, :content, :created_at, :updated_at
+json.extract! @blog, :id, :title, :content, :attachment, :created_at, :updated_at
